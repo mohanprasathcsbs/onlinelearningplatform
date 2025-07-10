@@ -1,0 +1,29 @@
+name: onlinelearningplatform
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  video_player: ^2.8.2
+  font_awesome_flutter: ^10.7.0
+  youtube_player_flutter: ^8.1.1
+  cupertino_icons: ^1.0.8
+  image_picker: ^1.0.5
+  provider: ^6.1.4
+  google_fonts: ^6.1.0
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+
