@@ -10,6 +10,8 @@ class ProfileScreen extends StatelessWidget {
     'about': 'Mobile App Developer, MERN, Flutter, Java, C++, Figma',
   };
 
+   ProfileScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -96,7 +96,6 @@ class _SignupScreenState extends State<SignupScreen> {
             const SizedBox(height: 150),
             ElevatedButton(
               onPressed: _signup,
-              child: const Text("Create Account"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color.fromARGB(255, 94, 154, 203),
                 foregroundColor: Colors.white,
@@ -104,6 +103,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
+              child: const Text("Create  Account"),
             ),
             const SizedBox(height: 20),
           ],

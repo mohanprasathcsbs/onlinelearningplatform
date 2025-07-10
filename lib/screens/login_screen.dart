@@ -7,6 +7,8 @@ class LoginScreen extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
+  LoginScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,7 +63,6 @@ class LoginScreen extends StatelessWidget {
                   );
                 }
               },
-              child: const Text("Login"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color.fromARGB(255, 94, 154, 203),
                 foregroundColor: Colors.white,
@@ -69,6 +70,7 @@ class LoginScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
+              child: const Text("Login"),
             ),
             TextButton(
               onPressed: () => Navigator.push(
