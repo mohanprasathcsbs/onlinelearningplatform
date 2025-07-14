@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+     
   video_player: ^2.8.2
   font_awesome_flutter: ^10.7.0
   youtube_player_flutter: ^8.1.1
@@ -22,13 +23,31 @@ dependencies:
   firebase_storage: ^11.6.5
   cloud_firestore: ^4.16.0
 
-  
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  image_path: "assets/app_icon.jpg" # Path to your icon image
+  android: true
+  ios: true
+  web:
+    generate: true
+    image_path: "assets/app_icon.jpg"
+    background_color: "#ffffff"
+    theme_color: "#000000"
+  windows:
+    generate: true
+    image_path: "assets/app_icon.jpg"
+  macos:
+    generate: true
+    image_path: "assets/app_icon.jpg"
 
 flutter:
   uses-material-design: true
-
+  assets:
+    - assets/app_icon.jpg
 
