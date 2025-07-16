@@ -231,7 +231,7 @@ class _SignupScreenState extends State<SignupScreen> {
               TextField(controller: emailController, keyboardType: TextInputType.emailAddress, decoration: const InputDecoration(labelText: "Email", prefixIcon: Icon(Icons.email))),
               TextField(controller: passwordController, obscureText: true, decoration: const InputDecoration(labelText: "Password", prefixIcon: Icon(Icons.lock))),
               TextField(controller: aboutController, maxLines: 3, decoration: const InputDecoration(labelText: "About", prefixIcon: Icon(Icons.info))),
-              const SizedBox(height: 20),
+              const SizedBox(height: 80),
               ElevatedButton(
                 onPressed: _signup,
                 style: ElevatedButton.styleFrom(
@@ -241,6 +241,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
                 child: const Text("Create Account"),
               ),
+              const SizedBox(height: 80),
             ],
           ),
         ),

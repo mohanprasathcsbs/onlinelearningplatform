@@ -106,7 +106,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'home_screen.dart';
 import 'signup_screen.dart';
-
+import 'splash_screen.dart';
 class LoginScreen extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -129,7 +129,7 @@ class LoginScreen extends StatelessWidget {
       );
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => HomeScreen()),
+        MaterialPageRoute(builder: (_) => const SplashScreenAfterLogin()),
       );
     } catch (e) {
       _showError(context, "Login failed. Please check credentials.");

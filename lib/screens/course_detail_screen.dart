@@ -159,6 +159,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
       final enrolledCourses = List<String>.from(userDoc['enrolledCourses'] ?? []);
       if (enrolledCourses.contains(widget.course.title)) {
         setState(() => isEnrolled = true);
+
       }
     }
   }

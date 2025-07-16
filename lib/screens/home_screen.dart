@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Online Learning"),
+        title: const Text("Learn Build Grow"),
         actions: [
           IconButton(
             icon: const Icon(Icons.person),
