@@ -25,14 +25,14 @@ class _SplashScreenAfterLoginState extends State<SplashScreenAfterLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(129, 240, 241, 241),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
            
             Image.asset(
-              'assets/logo1.png', 
+              'assets/appicon.jpg', 
               width: 220,
             ),
             const SizedBox(height: 20),
