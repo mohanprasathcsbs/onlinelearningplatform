@@ -241,12 +241,11 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
       appBar: AppBar(title: Text(widget.course.title)),
       body: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xFFD9F1FF), Color(0xFFE3DFFF)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
+                  image: DecorationImage(
+                    image: AssetImage('assets/bg2.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20),
           child: Column(

@@ -139,21 +139,20 @@ class _VideoScreenState extends State<VideoScreen> {
         elevation: 0,
         title: Row(
           children: const [
-            Icon(Icons.play_circle, color: Colors.white),
+            Icon(Icons.play_circle, color: Colors.lightBlueAccent),
             SizedBox(width: 8),
-            Text("Course Player", style: TextStyle(color: Colors.white)),
+            Text("Course Player", style: TextStyle(color: Colors.black)),
           ],
         ),
       ),
       body: Container(
         width: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xFF0F2027), Color(0xFF203A43), Color(0xFF2C5364)],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
-        ),
+       decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/bg2.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
         child: SafeArea(
           child: SingleChildScrollView(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
@@ -162,7 +161,7 @@ class _VideoScreenState extends State<VideoScreen> {
                 // Player Card
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: const Color.fromARGB(255, 83, 123, 165),
                     borderRadius: BorderRadius.circular(16),
                     boxShadow: [
                       BoxShadow(

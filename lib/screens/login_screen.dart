@@ -230,15 +230,15 @@ class LoginScreen extends StatelessWidget {
      
       body: Stack(
         children: [
-          // Background Image
+          
           SizedBox.expand(
             child: Image.asset(
-              'assets/bg2.jpg', // Make sure this path matches your pubspec.yaml
+              'assets/bg2.jpg', 
               fit: BoxFit.cover,
             ),
           ),
 
-          // Foreground UI
+          
           SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(20),
@@ -247,7 +247,7 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   const SizedBox(height: 110),
 
-                  // App Name
+                  
                   const Text(
                     "Online Learning Platform",
                     style: TextStyle(

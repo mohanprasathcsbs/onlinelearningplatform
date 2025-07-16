@@ -285,15 +285,15 @@ class _HomeScreenState extends State<HomeScreen> {
     ),
   ],
 ),
-
+   
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xFFD9F1FF), Color(0xFFE3DFFF)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
+        
+       decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/bg2.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
         child: ListView(
           padding: const EdgeInsets.all(16),
           children: [

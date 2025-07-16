@@ -51,12 +51,11 @@ class EnrolledCoursesScreen extends StatelessWidget {
       appBar: AppBar(title: const Text("My Enrolled Courses")),
       body: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xFFF1F7FF), Color(0xFFE0E0FF)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
+                  image: DecorationImage(
+                    image: AssetImage('assets/bg2.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
         child: courses.isEmpty
             ? const Center(
                 child: Text(
