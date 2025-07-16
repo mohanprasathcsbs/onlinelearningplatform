@@ -1,8 +1,10 @@
 
+
 // import 'package:flutter/material.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
 // import 'home_screen.dart';
 // import 'signup_screen.dart';
+// import 'splash_screen.dart';
 
 // class LoginScreen extends StatelessWidget {
 //   final TextEditingController emailController = TextEditingController();
@@ -26,7 +28,7 @@
 //       );
 //       Navigator.pushReplacement(
 //         context,
-//         MaterialPageRoute(builder: (_) => HomeScreen()),
+//         MaterialPageRoute(builder: (_) => const SplashScreenAfterLogin()),
 //       );
 //     } catch (e) {
 //       _showError(context, "Login failed. Please check credentials.");
@@ -65,16 +67,45 @@
 //           padding: const EdgeInsets.all(20),
 //           child: Column(
 //             children: [
-//               TextField(
-//                 controller: emailController,
-//                 decoration: const InputDecoration(labelText: "Email"),
+//               const SizedBox(height: 200),
+
+//               // Email Field with Background
+//               Container(
+//                 decoration: BoxDecoration(
+//                   color: Colors.white.withOpacity(0.8),
+//                   borderRadius: BorderRadius.circular(8),
+//                 ),
+//                 child: TextField(
+//                   controller: emailController,
+//                   decoration: const InputDecoration(
+//                     labelText: "Email",
+//                     border: InputBorder.none,
+//                     contentPadding: EdgeInsets.symmetric(horizontal: 12),
+//                   ),
+//                 ),
 //               ),
-//               TextField(
-//                 controller: passwordController,
-//                 obscureText: true,
-//                 decoration: const InputDecoration(labelText: "Password"),
+
+//               const SizedBox(height: 16),
+
+//               // Password Field with Background
+//               Container(
+//                 decoration: BoxDecoration(
+//                   color: Colors.white.withOpacity(0.8),
+//                   borderRadius: BorderRadius.circular(8),
+//                 ),
+//                 child: TextField(
+//                   controller: passwordController,
+//                   obscureText: true,
+//                   decoration: const InputDecoration(
+//                     labelText: "Password",
+//                     border: InputBorder.none,
+//                     contentPadding: EdgeInsets.symmetric(horizontal: 12),
+//                   ),
+//                 ),
 //               ),
-//               const SizedBox(height: 20),
+
+//               const SizedBox(height: 37),
+
 //               ElevatedButton(
 //                 onPressed: () => _login(context),
 //                 style: ElevatedButton.styleFrom(
@@ -86,6 +117,9 @@
 //                 ),
 //                 child: const Text("Login"),
 //               ),
+
+//               const SizedBox(height: 10),
+
 //               TextButton(
 //                 onPressed: () => Navigator.push(
 //                   context,
@@ -101,12 +135,13 @@
 //   }
 // }
 
+
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'home_screen.dart';
 import 'signup_screen.dart';
 import 'splash_screen.dart';
+
 class LoginScreen extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -167,28 +202,97 @@ class LoginScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              TextField(
-                controller: emailController,
-                decoration: const InputDecoration(labelText: "Email"),
+              const SizedBox(height: 60),
+
+              // App Name
+              const Text(
+                "Online Learning",
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                ),
               ),
-              TextField(
-                controller: passwordController,
-                obscureText: true,
-                decoration: const InputDecoration(labelText: "Password"),
+
+              const SizedBox(height: 6),
+
+              // Theme Text
+              const Text(
+                "Learn. Build. Grow.",
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.black54,
+                  fontStyle: FontStyle.italic,
+                ),
               ),
-              const SizedBox(height: 20),
+
+              const SizedBox(height: 60),
+
+              // Email Field
+              
+              Container(
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 255, 255, 255).withOpacity(0.4),
+                  borderRadius: BorderRadius.circular(8),
+                  border:Border.all(
+      color: const Color.fromARGB(255, 5, 5, 5),  // Border color
+      width: 1.0,          // Border width
+    ),
+                ),
+                child: TextField(
+                  controller: emailController,
+                  decoration: const InputDecoration(
+                    labelText: "Email",
+                    border: InputBorder.none,
+                    contentPadding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 16),
+
+              // Password Field
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.8),
+                  borderRadius: BorderRadius.circular(8),
+                  border:Border.all(
+      color: const Color.fromARGB(255, 0, 0, 0),  // Border color
+      width: 1.0,          // Border width
+    ),
+   
+                ),
+                child: TextField(
+                  controller: passwordController,
+                  obscureText: true,
+                  decoration: const InputDecoration(
+                    labelText: "Password",
+                    border: InputBorder.none,
+                    contentPadding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                    
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 65),
+
               ElevatedButton(
                 onPressed: () => _login(context),
                 style: ElevatedButton.styleFrom(
+                  
                   backgroundColor: const Color.fromARGB(255, 94, 154, 203),
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                child: const Text("Login"),
+                child: const Text("Login", style: TextStyle(fontSize: 16)),
               ),
+
+              const SizedBox(height: 10),
+
               TextButton(
                 onPressed: () => Navigator.push(
                   context,
